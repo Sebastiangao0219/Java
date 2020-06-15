@@ -13,8 +13,8 @@ package chapter11.modeldemo.pkgame;
  **/
 public interface Assailable {
     /**
-     * All the methods are abstract.
-     * public abstract has been omitted.
+     * All the methods are abstrac by default.
+     * 'public abstract' has been omitted.
      * @Param:
      * @Return:
     **/
@@ -22,6 +22,8 @@ public interface Assailable {
     String getName();
     int getX();
     void setX(int x);
+    int getY();
+    void setY(int y);
     int getHp();
     void setHp(int hp);
     /**
@@ -30,8 +32,13 @@ public interface Assailable {
      * @Param:
      * @Return:
     **/
-
     boolean isFightByDistance(Assailable assa);
+    /**
+     * attack another object who can attack
+     * @Param:
+     * @Return:
+    **/
+    void fight(Assailable assa);
 
 
 }
